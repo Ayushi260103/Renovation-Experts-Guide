@@ -130,6 +130,10 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-accent) transparent;
+  
+  /* ADD THESE LINES */
+  display: flex;
+  justify-content: center;
 }
 
 .team-cards-container::-webkit-scrollbar {
@@ -149,8 +153,12 @@
   display: flex;
   gap: 2rem;
   padding: 0 2rem;
-  width: max-content;
-  min-width: 100%;
+  
+  /* MODIFY THESE LINES */
+  width: auto;           /* Changed from max-content */
+  min-width: 0;          /* Changed from 100% to allow centering */
+  justify-content: center; 
+  flex-wrap: wrap;       /* Optional: keeps them centered even if they wrap to a new line */
 }
 
 /* Team Card - Glassmorphism Style */
