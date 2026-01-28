@@ -5,34 +5,34 @@ import './Teams.css';
 const teamMembers = [
   {
     id: 1,
-    name: 'Sarah Johnson',
+    name: 'Harsh Gupta',
     role: 'Lead Interior Designer',
     image: '/team/team-member-1.jpg'
   },
   {
     id: 2,
-    name: 'Michael Chen',
+    name: 'Devansh Jaiswal',
     role: 'Project Manager',
     image: '/team/team-member-2.jpg'
   },
   {
     id: 3,
-    name: 'Emily Rodriguez',
+    name: 'Shivam Singh',
     role: 'Architectural Designer',
     image: '/team/team-member-3.jpg'
   },
-  {
-    id: 4,
-    name: 'David Thompson',
-    role: 'Master Craftsman',
-    image: '/team/team-member-4.jpg'
-   },
-  {
-    id: 5,
-    name: 'Jessica Martinez',
-    role: 'Client Relations Specialist',
-    image:'/team/team-member-5.jpg'
-  },
+  // {
+  //   id: 4,
+  //   name: 'David Thompson',
+  //   role: 'Master Craftsman',
+  //   image: '/team/team-member-4.jpg'
+  //  },
+  // {
+  //   id: 5,
+  //   name: 'Jessica Martinez',
+  //   role: 'Client Relations Specialist',
+  //   image:'/team/team-member-5.jpg'
+  // },
   // {
   //   id: 6,
   //   name: 'James Wilson',
