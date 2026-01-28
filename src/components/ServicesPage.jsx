@@ -157,7 +157,7 @@ const ServicesPage = () => {
 
             <div className="services-page-benefits">
               <div className="services-page-section-title">
-                <h2 className="services-page-section-heading">Six reasons why All Reno delivers the best renovation experience</h2>
+                <h2 className="services-page-section-heading">Six reasons why we deliver the best renovation experience</h2>
               </div>
               <div className="benefits-grid">
                 {benefits.map((b) => (
