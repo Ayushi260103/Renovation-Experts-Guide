@@ -1,0 +1,326 @@
+.workpage {
+  background: var(--color-bg-dark);
+}
+
+/* shared reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.workpage-hero {
+  padding-top: 120px;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.workpage-title {
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  line-height: 0.98;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.workpage-subtitle {
+  max-width: 780px;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  text-align: center;
+}
+
+.workpage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.workpage-card {
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--color-bg-card);
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.workpage-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.workpage-img {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+/* ComparisonSlider fills this area */
+.workpage-img .cmp {
+  height: 100%;
+}
+
+.workpage-watermark {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.85rem;
+  color: #141414;
+}
+
+.workpage-card-body {
+  padding: 1.5rem 1.5rem 1.75rem;
+  text-align: left;
+}
+
+.workpage-card-body h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+.workpage-card-body p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  text-align: left;
+}
+
+.workpage-process-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.workpage-kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem 0;
+  display: block;
+}
+
+.workpage-h2 {
+  margin: 0 0 2rem 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.workpage-linkbtn {
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-border);
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 250ms ease, border-color 250ms ease, background 250ms ease;
+  color: var(--color-text-primary);
+}
+
+.workpage-linkbtn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #1a1a2e;
+}
+
+.workpage-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.workpage-step {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  border-radius: 18px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.workpage-step:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.workpage-step-num {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+  min-width: 50px;
+  text-align: center;
+  padding-top: 0.25rem;
+}
+
+.workpage-step h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+}
+
+.workpage-step p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.workpage-cta-card {
+  border: 1px solid var(--color-border);
+  background: var(--color-primary);
+  border-radius: 18px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.workpage-cta-card h2 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.workpage-cta-card p {
+  margin: 0 auto 2rem;
+  max-width: 760px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.workpage-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.workpage-btn {
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 250ms ease, background 250ms ease, border-color 250ms ease;
+}
+
+.workpage-btn.primary {
+  background: var(--color-accent);
+  color: #1a1a2e;
+  box-shadow: var(--shadow-gold);
+}
+
+.workpage-btn.primary:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-2px);
+}
+
+.workpage-btn.secondary {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.workpage-btn.secondary:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .workpage-hero {
+    padding-top: 100px;
+    padding-bottom: 3rem;
+  }
+
+  .workpage-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .workpage-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .workpage-steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .workpage-cta-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .workpage-process-header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .workpage-hero {
+    padding-top: 80px;
+    padding-bottom: 2rem;
+  }
+
+  .workpage-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .workpage-subtitle {
+    font-size: 1rem;
+  }
+
+  .workpage-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .workpage-card-body {
+    padding: 1.5rem;
+  }
+
+  .workpage-cta-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .workpage-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .workpage-card-body {
+    padding: 1.25rem;
+  }
+
+  .workpage-step {
+    padding: 1.5rem;
+  }
+}
+
