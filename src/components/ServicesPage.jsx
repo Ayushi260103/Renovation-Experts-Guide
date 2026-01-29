@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FAQs from './FAQs';
 import './ServicesPage.css';
 
@@ -91,13 +92,13 @@ const ServicesPage = () => {
     // Ensure we land at the top of the Services page on navigation
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
-
+  const navigate = useNavigate();
   const goQuote = () => {
-    window.location.href = '/contact';
+    navigate('/contact');
   };
 
   const goWork = () => {
-    window.location.href = '/work';
+    navigate('/work');
   };
 
   return (

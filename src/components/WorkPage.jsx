@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Reveal from './Reveal';
 import ComparisonSlider from './ComparisonSlider';
@@ -73,13 +74,14 @@ const WorkPage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
+  const navigate = useNavigate();
 
   const goContact = () => {
-    window.location.href = '/contact';
+    navigate('/contact');
   };
 
   const goServices = () => {
-    window.location.href = '/services';
+    navigate('/services');
   };
 
   return (

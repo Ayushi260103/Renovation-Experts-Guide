@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Reveal from './Reveal';
 import './Teams.css';
@@ -43,6 +44,11 @@ const teamMembers = [
 
 const Teams = ({ variant = 'page' }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
+const navigate = useNavigate();
+
+  const goContact = () => {
+    navigate('/contact');
+  };
 
   const isHome = variant === 'home';
 
@@ -118,7 +124,7 @@ const Teams = ({ variant = 'page' }) => {
                 <p className="team-cta-text">
                   Let's discuss your renovation project and see how we can help transform your space.
                 </p>
-                <a href="/contact" className="team-cta-button">
+                <a onClick={goContact} className="team-cta-button">
                   Get Started
                 </a>
               </div>
