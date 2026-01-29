@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -6,6 +7,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToContact = () => {
+    navigate('/contact');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,19 +49,19 @@ const Header = () => {
         <div className="logo" onClick={handleLogoClick}>
           <img src="/logo.png" alt="All Reno" className="logo-image" />
         </div>
-        
+
         <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/work" onClick={() => setIsMobileMenuOpen(false)}>Work</Link>
           <Link to="/team" onClick={() => setIsMobileMenuOpen(false)}>Team</Link>
           <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-          <button className="btn-header" onClick={(e) => { e.preventDefault(); window.location.href = '/contact'; }}>
+          <button className="btn-header" onClick={scrollToContact}>
             Get Started
           </button>
         </nav>
 
-        <button 
+        <button
           className="mobile-menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
